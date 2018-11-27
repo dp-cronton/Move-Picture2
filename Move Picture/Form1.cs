@@ -17,9 +17,13 @@ namespace Move_Picture
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X + 5, pictureBox1.Location.Y);
+            for (int i = 0; i < 100; i++)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 3, pictureBox1.Location.Y);
+                await Task.Delay(50);
+            }
         }
     }
 }
